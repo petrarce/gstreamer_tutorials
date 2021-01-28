@@ -23,10 +23,8 @@ set(LIBRARIES
 	glib-2.0
 	gobject-2.0
 	gstreamer-1.0
+	gstrtspserver-1.0
 )
-message("GLIB_LIBRARIE=${GLIB_LIBRARIES}, GOBJECT_LIBRARIES=${GOBJECT_LIBRARIES}, GOBJECT_DEFINITIONS=${GOBJECT_DEFINITIONS}")
-add_subdirectory(task1/)
-
 add_executable(basic-tutorial-1 basic-tutorial-1.cpp)
 target_link_libraries(basic-tutorial-1 ${LIBRARIES})
 
@@ -39,4 +37,8 @@ target_link_libraries(basic-tutorial-3 ${LIBRARIES})
 
 add_executable(basic-tutorial-4 basic-tutorial-4.cpp)
 target_link_libraries(basic-tutorial-4 ${LIBRARIES})
+
+add_executable(rtsp-server-test rtsp-server-test.cpp)
+target_link_libraries(rtsp-server-test ${LIBRARIES})
+
 
